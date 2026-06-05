@@ -5,6 +5,7 @@
 }
 html,
 body {
+  min-height: 100vh;
   margin: 0;
   padding: 0;
   font-family: "Helvetica Neue", Arial, sans-serif;
@@ -12,6 +13,10 @@ body {
 }
 #logo {
   width: 100px;
+}
+#title-logo {
+  font-size: 1.3em;
+  color: #1f7a4d;
 }
 nav {
   display: flex;
@@ -21,7 +26,6 @@ nav {
 
 #nav-list {
   color: #555555;
-  width: 100%;
   list-style: none;
   display: flex;
   gap: 20px;
@@ -33,10 +37,10 @@ nav {
 }
 
 header {
-  padding-top: 8em;
-  padding-bottom: 8em;
+  padding-top: 9em;
+  padding-bottom: 9em;
   color: white;
-  background-color: rgb(80, 158, 80);
+  background-color: #1f7a4d;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -50,10 +54,13 @@ header {
 }
 
 .head-btn {
-  padding: 1em;
+  color: #1f7a4d;
+  padding: 0.9em 1.3em;
   border-radius: 999px;
   border: none;
-  box-shadow: 3px 3px 3px grey;
+  box-shadow: 0px 5px 10px rgba(61, 61, 61, 0.244);
+  font-weight: bold;
+  margin-top: 0.5em;
 }
 .head-btn:hover {
   background-color: #248f59;
@@ -61,4 +68,115 @@ header {
 
 #nav-list li:hover {
   background-color: #ebfaf2;
+}
+
+main {
+  margin-bottom: 60px;
+  h2 {
+    text-align: center;
+    font-weight: bold;
+    color: #218352;
+    margin-top: 2.5em;
+    margin-bottom: 2em;
+  }
+  #cards {
+    gap: 1.8em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.card1 {
+  background-color: #fafafa;
+  box-shadow: 0px 0px 15px rgba(178, 178, 178, 0.252);
+  padding: 1.5em;
+  border-radius: 5px;
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  p {
+    margin: 0;
+    color: #555555;
+  }
+  i {
+    color: #1f7a4d;
+    font-size: 2em;
+  }
+}
+
+footer {
+  background-color: rgb(31, 31, 31);
+  padding: 2.5em 0 0.8em;
+  .container {
+    width: 100%;
+    text-align: center;
+    i,
+    strong {
+      color: rgb(99, 211, 155);
+      font-size: 1.2em;
+    }
+    p,
+    .copy {
+      color: #d7d7d7;
+      font-size: 13px;
+    }
+    .social {
+      display: flex;
+      justify-content: center;
+      gap: 12.5px;
+
+      button {
+        background-color: rgb(53, 53, 53);
+        width: 2.3em;
+        height: 2.3em;
+        border-radius: 50%;
+        border: none;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.3em;
+  }
+  header {
+    h1 {
+      font-size: 2.8em;
+    }
+    p {
+      width: 70%;
+    }
+  }
+  main {
+    #cards {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-inline: 1.3em;
+      .card1 {
+        width: 40%;
+      }
+      .card1:last-child {
+        flex-grow: 1;
+      }
+    }
+  }
+  footer {
+    padding: 1.5em 1.3em;
+    .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+      align-items: center;
+    }
+  }
 }
