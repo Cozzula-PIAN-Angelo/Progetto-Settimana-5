@@ -1,0 +1,64 @@
+/* NAV CSS */
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background-color: #fafafa;
+}
+#logo {
+  width: 100px;
+}
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#nav-list {
+  color: #555555;
+  width: 100%;
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 0;
+  li {
+    padding: 0.3em;
+  }
+}
+
+header {
+  padding-top: 8em;
+  padding-bottom: 8em;
+  color: white;
+  background-color: rgb(80, 158, 80);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1 {
+    margin: 0;
+  }
+  p {
+    width: 85%;
+    text-align: center;
+  }
+}
+
+.head-btn {
+  padding: 1em;
+  border-radius: 999px;
+  border: none;
+  box-shadow: 3px 3px 3px grey;
+}
+.head-btn:hover {
+  background-color: #248f59;
+}
+
+#nav-list li:hover {
+  background-color: #ebfaf2;
+}
