@@ -61,7 +61,6 @@ header {
     animation: appariDalBasso 0.7s ease 0.15s both;
   }
 }
-
 .head-btn {
   color: #1f7a4d;
   padding: 0.9em 1.3em;
@@ -71,6 +70,9 @@ header {
   font-weight: bold;
   margin-top: 0.5em;
   animation: appariDalBasso 0.7s ease 0.3s both;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
 }
 .head-btn:hover {
   background-color: #248f59;
