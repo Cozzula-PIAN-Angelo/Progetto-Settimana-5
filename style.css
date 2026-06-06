@@ -25,17 +25,24 @@ nav {
 }
 
 #nav-list {
-  color: #555555;
   list-style: none;
   display: flex;
   gap: 20px;
   justify-content: center;
   padding: 0;
-  li {
-    padding: 0.3em;
+  li a {
+    padding: 0.5em 20px;
+    transition: background-color 0.3s ease;
+    color: #555555;
   }
 }
 
+a {
+  text-decoration: none;
+}
+#nav-list a:hover {
+  background-color: #ebfaf2;
+}
 header {
   padding-top: 9em;
   padding-bottom: 9em;
@@ -46,10 +53,12 @@ header {
   align-items: center;
   h1 {
     margin: 0;
+    animation: appariDalBasso 0.7s ease both;
   }
   p {
     width: 85%;
     text-align: center;
+    animation: appariDalBasso 0.7s ease 0.15s both;
   }
 }
 
@@ -61,13 +70,22 @@ header {
   box-shadow: 0px 5px 10px rgba(61, 61, 61, 0.244);
   font-weight: bold;
   margin-top: 0.5em;
+  animation: appariDalBasso 0.7s ease 0.3s both;
 }
 .head-btn:hover {
   background-color: #248f59;
+  color: #fafafa;
 }
 
-#nav-list li:hover {
-  background-color: #ebfaf2;
+@keyframes appariDalBasso {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 main {
@@ -97,6 +115,9 @@ main {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
   p {
     margin: 0;
     color: #555555;
@@ -104,6 +125,10 @@ main {
   i {
     color: #1f7a4d;
     font-size: 2em;
+  }
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0px 12px 24px rgba(31, 31, 31, 0.12);
   }
 }
 
@@ -134,9 +159,19 @@ footer {
         height: 2.3em;
         border-radius: 50%;
         border: none;
+        transition:
+          background-color 0.3s ease,
+          transform 0.3s ease;
+        &:hover {
+          background-color: #248f59;
+          border-radius: 50%;
+        }
       }
     }
   }
+}
+button i {
+  pointer-events: none;
 }
 
 @media (min-width: 768px) {
@@ -178,5 +213,30 @@ footer {
       text-align: left;
       align-items: center;
     }
+  }
+}
+
+@media (min-width: 1200px) {
+  nav {
+    padding: 0 6.5em;
+  }
+  header {
+    h1 {
+      font-size: 3.4em;
+    }
+    p {
+      width: 40%;
+    }
+  }
+  main {
+    #cards {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      padding: 1.5em 6.5em;
+    }
+  }
+  footer {
+    padding: 1.5em 6.5em;
   }
 }
